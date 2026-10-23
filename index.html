@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1210M14R10 - 手のひとふりで、隣の PC へ。</title>
+  <meta name="description" content="Web カメラのハンドジェスチャーで、写真やファイルを隣の PC へ放って送る Windows ユーティリティ。Bluetooth と Wi-Fi Direct だけで完結し、待機電力は 0.02 W。">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="1210M14R10 for Windows">
+  <meta property="og:description" content="掴んで、溜めて、放つ。ケーブルもルーターも要らない近接 P2P 転送。待機 0.02 W。">
+  <meta property="og:image" content="https://seisuma2-sketch.github.io/1210M14R10/assets/icon-1024.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">本文へ移動</a>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top">
+      <img src="assets/favicon-64.png" alt="" width="22" height="22">
+      <span>1210M14R10</span>
+    </a>
+    <nav class="nav-links" aria-label="ページ内">
+      <a href="#highlights">概要</a>
+      <a href="#gesture">ジェスチャー</a>
+      <a href="#connect">接続</a>
+      <a href="#power">省電力</a>
+      <a href="#specs">仕様</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="pill pill-sm" href="#download">ダウンロード</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 1. Hero -->
+  <section class="hero dark" id="top">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="eyebrow reveal">1210M14R10 for Windows</p>
+      <h1 class="hero-title reveal">手のひとふりで、<br>隣の PC へ。</h1>
+      <p class="hero-sub reveal">掴んで、溜めて、放つ。<br class="br-sp">Web カメラが手の動きを読み取り、<br>写真もファイルも、近くの PC へそのまま届けます。</p>
+      <div class="hero-icon reveal" aria-hidden="true">
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <img src="assets/icon-512.png" alt="" width="240" height="240">
+      </div>
+      <div class="cta reveal">
+        <a class="pill" href="#download">ダウンロード</a>
+        <a class="link" href="#specs">仕様を見る <svg class="chev" viewBox="0 0 8 14" aria-hidden="true"><path d="M1 1l6 6-6 6"/></svg></a>
+      </div>
+      <p class="hero-meta reveal">Windows 10 (2004 以降) / Windows 11 | 64 ビット | バージョン <span class="mono" data-version>1.0.0</span></p>
+    </div>
+  </section>
+
+  <!-- 2. Highlights -->
+  <section class="section light" id="highlights">
+    <div class="wrap">
+      <h2 class="h2 reveal">4 つのことを、<br>驚くほど静かに。</h2>
+    </div>
+    <div class="gallery reveal">
+      <div class="gallery-track" id="gallery">
+        <article class="card card-dark">
+          <p class="card-kicker">THROW DECK</p>
+          <h3 class="card-title">つまんで溜めて、<br>前へ放つだけ。</h3>
+          <p class="card-text">写真やファイルを手で掴むように集め、投げる動作で隣の PC へ送信します。</p>
+          <div class="card-art art-deck" aria-hidden="true"><span></span><span></span><span></span></div>
+        </article>
+        <article class="card card-light">
+          <p class="card-kicker">仮想デスクトップ</p>
+          <h3 class="card-title">手を払えば、<br>画面が切り替わる。</h3>
+          <p class="card-text">開いた手を左右に払うと、Windows の仮想デスクトップを瞬時に移動します。</p>
+          <div class="card-art art-desk" aria-hidden="true"><span></span><span></span><span></span></div>
+        </article>
+        <article class="card card-light">
+          <p class="card-kicker">近接ダイレクト転送</p>
+          <h3 class="card-title">近くの PC を、<br>自動で見つける。</h3>
+          <p class="card-text">Bluetooth で探して承認し、Wi-Fi Direct で高速に転送。ルーターもケーブルも要りません。</p>
+          <div class="card-art art-link" aria-hidden="true"><span></span><i></i><span></span></div>
+        </article>
+        <article class="card card-dark">
+          <p class="card-kicker">極限省電力</p>
+          <h3 class="card-title"><span class="mono lime">0.02 W</span><br>で待機。</h3>
+          <p class="card-text">手が写っていない間はカメラを物理的に切断し、CPU 使用率 0.00% で静かに待ちます。</p>
+          <div class="card-art art-power" aria-hidden="true"><span></span></div>
+        </article>
+      </div>
+      <div class="gallery-ctrl">
+        <button class="round" type="button" data-dir="-1" aria-label="前のカード"><svg viewBox="0 0 8 14" aria-hidden="true"><path d="M7 1L1 7l6 6"/></svg></button>
+        <button class="round" type="button" data-dir="1" aria-label="次のカード"><svg viewBox="0 0 8 14" aria-hidden="true"><path d="M1 1l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Gesture -->
+  <section class="section dark" id="gesture">
+    <div class="wrap center">
+      <p class="eyebrow reveal">空間ハンドジェスチャー</p>
+      <h2 class="h1 reveal">掴んで、溜めて、放つ。</h2>
+      <p class="lead reveal">21 の関節を毎秒最大 15 回読み取り、指先のわずかな動きを意図として理解します。マウスに手を伸ばす必要はもうありません。</p>
+    </div>
+    <div class="hand-stage reveal" aria-hidden="true">
+      <svg class="hand" viewBox="0 0 400 400">
+        <g class="bones">
+          <polyline points="200,340 160,315 128,285 108,255 95,228"/>
+          <polyline points="200,340 165,215 155,165 150,130 147,100"/>
+          <polyline points="165,215 200,205 235,212 268,228"/>
+          <polyline points="200,205 200,150 200,112 200,80"/>
+          <polyline points="235,212 243,162 248,128 252,100"/>
+          <polyline points="200,340 268,228 285,190 295,165 303,142"/>
+        </g>
+        <g class="joints">
+          <circle cx="200" cy="340" r="6"/>
+          <circle cx="160" cy="315" r="5"/><circle cx="128" cy="285" r="5"/><circle cx="108" cy="255" r="5"/><circle class="tip" cx="95" cy="228" r="7"/>
+          <circle cx="165" cy="215" r="5"/><circle cx="155" cy="165" r="5"/><circle cx="150" cy="130" r="5"/><circle class="tip" cx="147" cy="100" r="7"/>
+          <circle cx="200" cy="205" r="5"/><circle cx="200" cy="150" r="5"/><circle cx="200" cy="112" r="5"/><circle cx="200" cy="80" r="5"/>
+          <circle cx="235" cy="212" r="5"/><circle cx="243" cy="162" r="5"/><circle cx="248" cy="128" r="5"/><circle cx="252" cy="100" r="5"/>
+          <circle cx="268" cy="228" r="5"/><circle cx="285" cy="190" r="5"/><circle cx="295" cy="165" r="5"/><circle cx="303" cy="142" r="5"/>
+        </g>
+        <circle class="pinch-ring" cx="121" cy="164" r="18"/>
+      </svg>
+      <div class="thrown"><span></span><span></span><span></span></div>
+    </div>
+    <div class="wrap">
+      <ol class="steps">
+        <li class="reveal">
+          <span class="step-no mono">01</span>
+          <h3>つまむ</h3>
+          <p>親指と人差し指で画面上の写真やファイルをつまみ、デッキへ取り込みます。</p>
+        </li>
+        <li class="reveal">
+          <span class="step-no mono">02</span>
+          <h3>溜める</h3>
+          <p>手を握ってチャージ。送りたいものをいくつでも重ねておけます。</p>
+        </li>
+        <li class="reveal">
+          <span class="step-no mono">03</span>
+          <h3>放つ</h3>
+          <p>前へ押し出すように手を開くと、接続中の PC へ一斉に送信されます。</p>
+        </li>
+      </ol>
+      <p class="note reveal">カメラの映像はこの PC の中だけで処理され、保存も外部送信もされません。ドラッグ &amp; ドロップでの送信にも対応しています。</p>
+    </div>
+  </section>
+
+  <!-- 4. Connect -->
+  <section class="section light" id="connect">
+    <div class="wrap center">
+      <p class="eyebrow eyebrow-ink reveal">近接 P2P 転送</p>
+      <h2 class="h1 reveal">ケーブルも、<br class="br-sp">ルーターも、要らない。</h2>
+      <p class="lead lead-ink reveal">Bluetooth で近くの PC を見つけて承認したら、あとは最速の経路を自動で選びます。学内 Wi-Fi のような端末どうしが通信できない環境でも、PC と PC を直接つなぎます。</p>
+    </div>
+    <div class="wrap">
+      <div class="link-diagram reveal">
+        <div class="pc">
+          <svg viewBox="0 0 64 48" aria-hidden="true"><rect x="8" y="4" width="48" height="32" rx="3"/><path d="M2 42h60"/></svg>
+          <span>この PC</span>
+        </div>
+        <div class="lanes">
+          <div class="lane"><span class="lane-tag">探す</span><span class="lane-line"></span><span class="lane-name">Bluetooth LE</span></div>
+          <div class="lane"><span class="lane-tag">つなぐ</span><span class="lane-line"></span><span class="lane-name">Bluetooth RFCOMM</span></div>
+          <div class="lane lane-fast"><span class="lane-tag">送る</span><span class="lane-line"></span><span class="lane-name">Wi-Fi Direct</span></div>
+        </div>
+        <div class="pc">
+          <svg viewBox="0 0 64 48" aria-hidden="true"><rect x="8" y="4" width="48" height="32" rx="3"/><path d="M2 42h60"/></svg>
+          <span>隣の PC</span>
+        </div>
+      </div>
+      <div class="trio">
+        <div class="reveal">
+          <h3>自動で昇格</h3>
+          <p>接続後、相手と名前が完全に一致した Wi-Fi Direct だけに切り替え。周囲のプリンターやテレビには接続しません。</p>
+        </div>
+        <div class="reveal">
+          <h3>途切れない</h3>
+          <p>Wi-Fi Direct が使えない PC や、途中で切れた場合も、Bluetooth のまま転送を続けます。</p>
+        </div>
+        <div class="reveal">
+          <h3>何でも送れる</h3>
+          <p>写真、ファイル、フォルダ丸ごと、そしてクリップボード。コピーした文字は隣の PC でそのまま貼り付けられます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Power -->
+  <section class="section dark" id="power">
+    <div class="wrap center">
+      <p class="eyebrow reveal">極限省電力設計</p>
+      <h2 class="h-giant reveal"><span class="mono">0.02</span> W</h2>
+      <p class="lead reveal">常駐しているのに、ほとんど電気を使わない。<br>必要な瞬間だけ目を覚まし、終われば即座に眠ります。</p>
+    </div>
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat reveal">
+          <p class="stat-num mono">0.02<small>W</small></p>
+          <p class="stat-label">待機時の推定消費電力</p>
+        </div>
+        <div class="stat reveal">
+          <p class="stat-num mono">0.7<small>W</small></p>
+          <p class="stat-label">ジェスチャー認識中の上限</p>
+        </div>
+        <div class="stat reveal">
+          <p class="stat-num mono">0.00<small>%</small></p>
+          <p class="stat-label">待機時の CPU 使用率</p>
+        </div>
+      </div>
+      <div class="trio trio-dark">
+        <div class="reveal">
+          <h3>効率モードを二重に</h3>
+          <p>Windows 11 の EcoQoS をアプリ本体とビジョンエンジンの両方に適用し、CPU を省電力の速度で動かします。</p>
+        </div>
+        <div class="reveal">
+          <h3>高効率コアだけで</h3>
+          <p>ハイブリッド CPU では E コアだけで処理し、P コアを眠らせたままにします。</p>
+        </div>
+        <div class="reveal">
+          <h3>カメラを本当に止める</h3>
+          <p>手が写らなくなるとカメラを物理的に切断。USB の給電とセンサーの発熱まで止めます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Privacy -->
+  <section class="section light" id="privacy">
+    <div class="wrap center">
+      <h2 class="h1 reveal">すべて、<br class="br-sp">この部屋の中で。</h2>
+      <p class="lead lead-ink reveal">クラウドも、アカウント登録も、インターネット接続も要りません。データは近くの PC どうしで直接やり取りされ、どこにも残りません。</p>
+      <ul class="badges reveal">
+        <li>クラウド不要</li>
+        <li>アカウント不要</li>
+        <li>オフラインで動作</li>
+        <li>Python 同梱</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7. Specs -->
+  <section class="section white" id="specs">
+    <div class="wrap">
+      <h2 class="h2 reveal">技術仕様</h2>
+      <dl class="spec">
+        <div class="reveal"><dt>対応 OS</dt><dd>Windows 10 バージョン 2004 (ビルド 19041) 以降<br>Windows 11</dd></div>
+        <div class="reveal"><dt>アーキテクチャ</dt><dd>64 ビット (x64)</dd></div>
+        <div class="reveal"><dt>カメラ</dt><dd>Web カメラ (内蔵 / USB)<br>320 x 240、最大 15 FPS で認識</dd></div>
+        <div class="reveal"><dt>ジェスチャー</dt><dd>21 関節ハンドランドマーク<br>つまむ / 握る / 放つ / 水平スワイプ</dd></div>
+        <div class="reveal"><dt>探索</dt><dd>Bluetooth Low Energy (Bluetooth 4.0 以降)</dd></div>
+        <div class="reveal"><dt>接続と転送</dt><dd>Bluetooth RFCOMM で接続・承認<br>Wi-Fi Direct で高速転送 (非対応時は Bluetooth)</dd></div>
+        <div class="reveal"><dt>消費電力</dt><dd>待機 0.02 W / ミニカプセル 0.03 W / 稼働 0.47 - 0.70 W<br><span class="muted">アプリ単体の推定値。PC 全体の消費とは異なります。</span></dd></div>
+        <div class="reveal"><dt>インストール</dt><dd>ユーザー単位 (管理者権限は不要)<br>Python ランタイムを同梱 (別途インストール不要)</dd></div>
+        <div class="reveal"><dt>更新</dt><dd>Velopack による差分更新</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 8. Download -->
+  <section class="section dark" id="download">
+    <div class="wrap center">
+      <img class="dl-icon reveal" src="assets/icon-512.png" alt="1210M14R10 のアイコン" width="144" height="144">
+      <h2 class="h1 reveal">今すぐ、はじめよう。</h2>
+      <p class="lead reveal">送る側と受け取る側、両方の PC にインストールしてください。</p>
+      <div class="dl-box reveal">
+        <a class="pill pill-lg" data-download href="https://github.com/seisuma2-sketch/1210M14R10/releases/download/v1.0.0/1210M14R10-1.0.0-Setup.exe" download>
+          <svg class="dl-glyph" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1v9M4 6.5L8 10.5 12 6.5M2 14h12"/></svg>
+          Windows 版をダウンロード
+        </a>
+        <p class="dl-retry" id="dlRetry" hidden>ダウンロードが始まらない場合は <a data-download href="https://github.com/seisuma2-sketch/1210M14R10/releases/download/v1.0.0/1210M14R10-1.0.0-Setup.exe">こちら</a></p>
+        <dl class="dl-meta">
+          <div><dt>ファイル</dt><dd class="mono">1210M14R10-1.0.0-Setup.exe</dd></div>
+          <div><dt>バージョン</dt><dd class="mono" data-version>1.0.0</dd></div>
+          <div><dt>サイズ</dt><dd class="mono" id="dlSize">198.4 MB (208,023,885 バイト)</dd></div>
+          <div><dt>SHA-256</dt><dd class="mono hash" id="dlHash">a7f2a84cc04a865759be8f8493a4f419b9e98e11d2fb73bd3bff536b091e7a0a</dd></div>
+        </dl>
+      </div>
+      <ol class="install">
+        <li class="reveal"><span class="mono">1</span><p><b>ダウンロード</b>上のボタンから Setup.exe を保存します。</p></li>
+        <li class="reveal"><span class="mono">2</span><p><b>開く</b>保存した Setup.exe をダブルクリックします。</p></li>
+        <li class="reveal"><span class="mono">3</span><p><b>完了</b>数秒でインストールされ、自動で起動します。</p></li>
+      </ol>
+      <div class="notice reveal">
+        <p class="notice-title">[ INFO ] 「Windows によって PC が保護されました」と表示されたら</p>
+        <p>このインストーラーにはまだコード署名がないため、初回に Microsoft Defender SmartScreen の確認画面が出ることがあります。「詳細情報」を押し、「実行」を選ぶとインストールが始まります。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FAQ -->
+  <section class="section light" id="faq">
+    <div class="wrap narrow">
+      <h2 class="h2 reveal">よくある質問</h2>
+      <div class="faq">
+        <details class="reveal">
+          <summary>インターネット接続は必要ですか</summary>
+          <p>ダウンロード時以外は必要ありません。PC どうしは Bluetooth と Wi-Fi Direct で直接つながり、クラウドやルーターを経由しません。</p>
+        </details>
+        <details class="reveal">
+          <summary>相手の PC にもインストールが必要ですか</summary>
+          <p>はい。送る側と受け取る側の両方に 1210M14R10 をインストールし、Bluetooth を有効にしてください。受け取る側の PC ではカメラは起動しません。</p>
+        </details>
+        <details class="reveal">
+          <summary>Web カメラがなくても使えますか</summary>
+          <p>ジェスチャー操作にはカメラが必要ですが、ファイルをウィンドウへドラッグ &amp; ドロップして送ることもできます。</p>
+        </details>
+        <details class="reveal">
+          <summary>Wi-Fi Direct に対応していない PC では</summary>
+          <p>Bluetooth のまま転送を続けます。大きなファイルは時間がかかりますが、写真やクリップボードの同期は問題なく行えます。</p>
+        </details>
+        <details class="reveal">
+          <summary>カメラの映像は保存・送信されますか</summary>
+          <p>いいえ。映像はこの PC の中で手の関節位置を求めるためだけに使われ、保存も外部への送信もされません。</p>
+        </details>
+        <details class="reveal">
+          <summary>Python を別に入れる必要はありますか</summary>
+          <p>ありません。ビジョンエンジン用の Python ランタイムと必要なライブラリはインストーラーに同梱されています。</p>
+        </details>
+        <details class="reveal">
+          <summary>ファイアウォールの確認が表示されました</summary>
+          <p>PC どうしの転送に通信ポートを使うため、初回に Windows のファイアウォールの許可を求められることがあります。プライベート ネットワークで許可してください。</p>
+        </details>
+        <details class="reveal">
+          <summary>アンインストールするには</summary>
+          <p>Windows の「設定」から「アプリ」、「インストールされているアプリ」を開き、1210M14R10 の「アンインストール」を選んでください。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="nav-brand nav-brand-ink" href="#top">
+        <img src="assets/favicon-64.png" alt="" width="22" height="22">
+        <span>1210M14R10</span>
+      </a>
+      <a class="link link-ink" href="#download">ダウンロード <svg class="chev" viewBox="0 0 8 14" aria-hidden="true"><path d="M1 1l6 6-6 6"/></svg></a>
+    </div>
+    <p class="footer-note">消費電力はアプリ単体の推定値で、PC の構成や使い方によって異なります。Windows は Microsoft Corporation の商標です。同梱コンポーネントのライセンスはインストール先の THIRD_PARTY_NOTICES.txt を参照してください。</p>
+    <p class="footer-copy">Copyright <span id="year">2026</span> 1210M14R10. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
