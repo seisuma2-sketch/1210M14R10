@@ -63,6 +63,47 @@
     });
   });
 
+  // Latest release: version, file name, size and SHA-256 from the GitHub API (spec section 6).
+  // The values written in index.html stay as the fallback when the API cannot be reached.
+  var RELEASE_API = 'https://api.github.com/repos/seisuma2-sketch/1210M14R10/releases/latest';
+  var SETUP_ASSET = '1210M14R10-win-Setup.exe';
+
+  function formatSize(bytes) {
+    var mb = (bytes / 1048576).toFixed(1);
+    return mb + ' MB (' + bytes.toLocaleString('ja-JP') + ' バイト)';
+  }
+
+  function showRelease(release) {
+    var assets = release.assets || [];
+    var setup = null;
+    for (var i = 0; i < assets.length; i++) {
+      if (assets[i].name === SETUP_ASSET) { setup = assets[i]; break; }
+    }
+    if (!setup) return;
+
+    var version = String(release.tag_name || '').replace(/^v/, '');
+    if (version) {
+      document.querySelectorAll('[data-version]').forEach(function (el) { el.textContent = version; });
+    }
+    var file = document.getElementById('dlFile');
+    if (file) file.textContent = setup.name;
+    var size = document.getElementById('dlSize');
+    if (size && typeof setup.size === 'number') size.textContent = formatSize(setup.size);
+    var hash = document.getElementById('dlHash');
+    var digest = typeof setup.digest === 'string' ? setup.digest : '';
+    if (hash && digest.indexOf('sha256:') === 0) hash.textContent = digest.slice(7);
+    if (setup.browser_download_url) {
+      document.querySelectorAll('[data-download]').forEach(function (a) { a.href = setup.browser_download_url; });
+    }
+  }
+
+  if (window.fetch) {
+    fetch(RELEASE_API, { headers: { Accept: 'application/vnd.github+json' } })
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (release) { if (release) showRelease(release); })
+      .catch(function () { /* offline or rate limited: keep the values in index.html */ });
+  }
+
   var year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 })();

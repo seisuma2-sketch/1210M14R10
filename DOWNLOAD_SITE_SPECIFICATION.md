@@ -90,7 +90,10 @@
   1. `配布用フォルダを最新に更新.bat /nopause /nozip` で `Publish_Offline` を作り直す。
   2. `vpk pack` で `Releases/` に Setup.exe・nupkg・更新フィードを出力する。
   3. `Releases/1210M14R10-<版>-Setup.exe` と `website/downloads/1210M14R10-<版>-Setup.exe` に複製する。
-- サイトのリンク先は `index.html` の `<a data-download>` の `href` で一元管理する。サイズと SHA-256 はダウンロード欄に表示し、版を上げたら更新する (`Get-FileHash -Algorithm SHA256` の値)。
+- サイトのリンク先は `index.html` の `<a data-download>` の `href` で一元管理する (`releases/latest/download/1210M14R10-win-Setup.exe`。最新のリリースを指す)。
+- ダウンロード欄の版・ファイル名・サイズ・SHA-256 は、ページを開いた時に `main.js` が GitHub API (`https://api.github.com/repos/seisuma2-sketch/1210M14R10/releases/latest`) の最新リリースから読み込んで表示する (2026-10-24 変更、ユーザー指示)。
+  - 対象のファイルは `1210M14R10-win-Setup.exe`。版は `tag_name` (先頭の `v` を除く)、サイズは `size`、SHA-256 は `digest` (`sha256:` の後ろ)。`[data-version]` (ヒーローとダウンロード欄) と `#dlFile` / `#dlSize` / `#dlHash` を書き換え、リンクも `browser_download_url` にする。
+  - 読み込みはページを開いた時の 1 回だけ。GitHub API に届かない / 回数制限 (認証なしで 1 時間 60 回 / IP) の場合は、`index.html` に書いた値のまま表示する。新しい版を公開した時に `index.html` の値も合わせておくと、その場合も正しい値になる。
 - 公開先 (2026-10-23 決定):
   - サイト: GitHub Pages `https://seisuma2-sketch.github.io/1210M14R10/` (リポジトリ `seisuma2-sketch/1210M14R10` の `main` ブランチ直下。中身は `website/` だけで、アプリのソースは置かない)。
   - Setup.exe: 同リポジトリの GitHub Releases (タグ `v<版>`)。GitHub Pages は 100 MB を超えるファイルを置けないため。
