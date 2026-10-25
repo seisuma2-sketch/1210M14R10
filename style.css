@@ -205,6 +205,51 @@ ol, ul { list-style: none; }
 .trio-dark p { color: var(--mist); }
 .trio-dark h3 { color: #F5F5F7; }
 
+/* ---------- Compact views (MiniCapsule / ThreeRingHud, static mockups of the app UI) ---------- */
+#compact { background: radial-gradient(ellipse 70% 40% at 50% 38%, rgba(132, 204, 22, 0.10), transparent 70%), var(--black); }
+.capsule-demo { margin: 80px auto 0; width: min(600px, 100%); }
+.cap {
+  position: relative; display: flex; align-items: center; gap: 6px; height: 60px; padding: 0 10px 0 12px;
+  border-radius: 30px; background: var(--surface); border: 1px solid #262B31;
+  box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(163, 230, 53, 0.06);
+}
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 11px; border-radius: 16px; white-space: nowrap;
+  background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); color: #D4D8DD; font-size: 14px;
+}
+.chip.mono { color: var(--lime-bright); font-size: 13px; }
+.chip-on { color: var(--lime-bright); min-width: 0; flex: 0 1 auto; }
+.chip-name { overflow: hidden; text-overflow: ellipsis; }
+.chip-xfer { color: var(--lime-bright); }
+.chip-xfer .mono { font-size: 13px; }
+.chip-chev { width: 9px; height: 6px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.led { width: 7px; height: 7px; border-radius: 50%; background: var(--lime-bright); box-shadow: 0 0 8px rgba(163, 230, 53, 0.9); flex: 0 0 auto; }
+.cap-sep { width: 1px; height: 26px; background: #262B31; margin: 0 2px 0 auto; flex: 0 0 auto; }
+.cap-btn { width: 30px; height: 30px; border-radius: 50%; flex: 0 0 auto; border: 1.5px solid #5A636E; }
+.cap-pin { border-color: var(--lime-bright); background: rgba(132, 204, 22, 0.18); }
+.cap-bar { position: absolute; left: 30px; right: 30px; bottom: 3px; height: 3px; border-radius: 2px; background: #3F6212; overflow: hidden; }
+.cap-bar span { display: block; width: 45%; height: 100%; background: var(--lime-bright); }
+.cap-list { margin: 8px 14px 0; padding: 12px 16px 6px; border-radius: 14px; background: #1D2126; border: 1px solid #262B31; }
+.cap-list-title { font-size: 13px; color: #6B737C; margin-bottom: 4px; }
+.cap-row { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; font-size: 15px; color: #D4D8DD; }
+.cap-row + .cap-row { border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.cap-row .mono { font-size: 13px; color: #A1A1A6; }
+.cap-row .mono.lime { color: var(--lime-bright); }
+
+.rings-demo { margin: 72px auto 0; max-width: 720px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 36px 24px 30px; border-radius: 28px; background: var(--oled); border: 1px solid rgba(255, 255, 255, 0.06); }
+.rings-demo figure { margin: 0; text-align: center; }
+.rings-demo svg { width: min(160px, 100%); margin: 0 auto; overflow: visible; }
+.r-track { fill: none; stroke: #262B31; stroke-width: 7; }
+.r-lit { stroke: #3F6212; }
+.r-glow { fill: none; stroke: rgba(163, 230, 53, 0.35); stroke-width: 15; filter: blur(3px); }
+.r-val { fill: none; stroke: var(--lime-bright); stroke-width: 7; stroke-linecap: round; }
+.r-arc { stroke-dasharray: 113.1 251.33; transform: rotate(-90deg); transform-origin: 50px 50px; }
+.rings-demo text { fill: #A3E635; font-size: 13px; font-weight: 600; text-anchor: middle; font-family: var(--font); }
+.rings-demo text.mono { font-family: var(--mono); font-size: 15px; }
+.rings-demo .r-sub { fill: #6B737C; font-size: 9px; font-weight: 500; }
+.rings-demo figcaption { margin-top: 14px; font-size: 15px; font-weight: 600; color: #F5F5F7; }
+.rings-demo figcaption span { display: block; font-size: 12px; font-weight: 500; color: #86868B; margin-bottom: 2px; }
+
 /* ---------- Power ---------- */
 #power { background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(132, 204, 22, 0.12), transparent 70%), var(--black); }
 .h-giant { font-size: clamp(88px, 17vw, 200px); line-height: 1; background: linear-gradient(180deg, #ECFCCB 0%, #A3E635 55%, #4D7C0F 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -294,6 +339,12 @@ ol, ul { list-style: none; }
   .stat { padding: 28px 0; }
   .trio-dark { margin-top: 56px; }
   .link-diagram { grid-template-columns: 1fr; padding: 32px 20px; margin: 56px 0 48px; gap: 20px; }
+  .capsule-demo { margin-top: 56px; }
+  .cap { height: auto; min-height: 56px; flex-wrap: wrap; padding: 10px 12px 14px; border-radius: 24px; gap: 6px; }
+  .cap-sep { display: none; }
+  .cap-btn { display: none; }
+  .rings-demo { gap: 8px; padding: 24px 10px 20px; margin-top: 48px; }
+  .rings-demo figcaption { font-size: 13px; }
   .lane { grid-template-columns: 52px 1fr; }
   .lane-name { grid-column: 1 / -1; text-align: left; min-width: 0; }
   .spec > div { grid-template-columns: 1fr; gap: 6px; padding: 20px 0; }

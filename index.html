@@ -32,6 +32,7 @@
         <a href="#highlights">概要</a>
         <a href="#gesture">ジェスチャー</a>
         <a href="#connect">接続</a>
+        <a href="#compact">常駐表示</a>
         <a href="#power">省電力</a>
         <a href="#specs">仕様</a>
         <a href="#faq">FAQ</a>
@@ -61,7 +62,7 @@
             </svg></a>
         </div>
         <p class="hero-meta reveal">Windows 10 (2004 以降) / Windows 11 | 64 ビット | バージョン <span class="mono"
-            data-version>1.0.2</span></p>
+            data-version>1.0.4</span></p>
       </div>
     </section>
 
@@ -220,7 +221,64 @@
           </div>
           <div class="reveal">
             <h3>何でも送れる</h3>
-            <p>写真、ファイル、フォルダ丸ごと、そしてクリップボード。コピーした文字は隣の PC でそのまま貼り付けられます。</p>
+            <p>写真、ファイル、フォルダ丸ごと。複数のファイルは 1 つにまとめて届けます。クリップボードの共有は今後のアップデートで対応予定です。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Compact views (MiniCapsule / ThreeRingHud, 1.0.4) -->
+    <section class="section dark" id="compact">
+      <div class="wrap center">
+        <p class="eyebrow reveal">常駐表示</p>
+        <h2 class="h1 reveal">画面のすみで、<br class="br-sp">ひと目でわかる。</h2>
+        <p class="lead reveal">普段は 1 行のカプセル、必要な時は 3 つのリング。接続・ファイル・手の認識を、短い日本語と色だけで伝えます。状態が変わった瞬間だけ描き直すので、表示中も電力はほとんど増えません。</p>
+      </div>
+      <div class="wrap">
+        <div class="capsule-demo reveal" aria-hidden="true">
+          <div class="cap">
+            <span class="chip chip-on"><b class="led"></b><span class="chip-name">DESKTOP-SUDO</span><svg class="chip-chev" viewBox="0 0 8 5"><path d="M1 1l3 3 3-3" /></svg></span>
+            <span class="chip"><b class="led"></b>認識中</span>
+            <span class="chip chip-xfer">送信 <span class="mono">45% (12MB/s)</span></span>
+            <span class="chip mono">0.02W</span>
+            <span class="cap-sep"></span>
+            <span class="cap-btn"></span><span class="cap-btn"></span><span class="cap-btn cap-pin"></span>
+            <span class="cap-bar"><span></span></span>
+          </div>
+          <div class="cap-list">
+            <p class="cap-list-title">周辺の PC (押すと接続を要求)</p>
+            <div class="cap-row"><span>DESKTOP-SUDO</span><span class="mono lime">[ 接続済 ]</span></div>
+            <div class="cap-row"><span>VAIO_WATERFALL</span><span class="mono">[ 接続 ]</span></div>
+          </div>
+        </div>
+
+        <div class="rings-demo reveal" aria-hidden="true">
+          <figure>
+            <svg viewBox="0 0 100 100"><circle class="r-track" cx="50" cy="50" r="40" /><circle class="r-glow" cx="50" cy="50" r="40" /><circle class="r-val" cx="50" cy="50" r="40" /><text x="50" y="47">DESKTOP</text><text class="r-sub" x="50" y="62">接続中の相手</text></svg>
+            <figcaption><span>【 通 信 】</span>接続完了</figcaption>
+          </figure>
+          <figure>
+            <svg viewBox="0 0 100 100"><circle class="r-track r-lit" cx="50" cy="50" r="40" /><circle class="r-val r-arc" cx="50" cy="50" r="40" /><text class="mono" x="50" y="55">45%</text></svg>
+            <figcaption><span>【 ファイル 】</span>送信中</figcaption>
+          </figure>
+          <figure>
+            <svg viewBox="0 0 100 100"><circle class="r-track" cx="50" cy="50" r="40" /><circle class="r-glow" cx="50" cy="50" r="40" /><circle class="r-val" cx="50" cy="50" r="40" /><text x="50" y="55">認識中</text></svg>
+            <figcaption><span>【 手認識 】</span>カメラ良好 (15fps)</figcaption>
+          </figure>
+        </div>
+
+        <div class="trio trio-dark">
+          <div class="reveal">
+            <h3>チップでひと目で</h3>
+            <p>「未接続」「待機中」「3件」「0.02W」。記号ではなく日本語で示し、状態ごとに色が変わります。相手の PC 名が長い時は、カプセルが少しだけ広がります。</p>
+          </div>
+          <div class="reveal">
+            <h3>ワンクリックで接続</h3>
+            <p>カプセルの接続チップを押すと、見つかった PC の一覧がその場で開きます。大きな画面に戻らずに接続を始められます。</p>
+          </div>
+          <div class="reveal">
+            <h3>好きな場所に</h3>
+            <p>画面の上端・下端の左・中央・右へ吸い付くように配置でき、次に起動した時も同じ場所に現れます。ファイルをカプセルへドロップすれば、そのまま装填。</p>
           </div>
         </div>
       </div>
@@ -309,6 +367,14 @@
             <dd>Bluetooth RFCOMM で接続・承認<br>Wi-Fi Direct で高速転送 (非対応時は Bluetooth)</dd>
           </div>
           <div class="reveal">
+            <dt>常駐表示</dt>
+            <dd>ミニカプセル 400 - 440 x 44 / 3 連リング 330 x 175<br>画面の上端・下端へスナップ配置、位置を記憶</dd>
+          </div>
+          <div class="reveal">
+            <dt>クリップボード共有</dt>
+            <dd>準備中<br><span class="muted">今後のアップデートで対応予定です。</span></dd>
+          </div>
+          <div class="reveal">
             <dt>消費電力</dt>
             <dd>待機 0.02 W / ミニカプセル 0.03 W / 稼働 0.47 - 0.70 W<br><span class="muted">アプリ単体の推定値。PC 全体の消費とは異なります。</span>
             </dd>
@@ -350,7 +416,7 @@
             </div>
             <div>
               <dt>バージョン</dt>
-              <dd class="mono" data-version>1.0.2</dd>
+              <dd class="mono" data-version>1.0.4</dd>
             </div>
             <div>
               <dt>サイズ</dt>
@@ -400,7 +466,11 @@
           </details>
           <details class="reveal">
             <summary>Wi-Fi Direct に対応していない PC では</summary>
-            <p>Bluetooth のまま転送を続けます。大きなファイルは時間がかかりますが、写真やクリップボードの同期は問題なく行えます。</p>
+            <p>Bluetooth のまま転送を続けます。大きなファイルは時間がかかりますが、写真や小さなファイルの転送は問題なく行えます。</p>
+          </details>
+          <details class="reveal">
+            <summary>クリップボードの共有はできますか</summary>
+            <p>現在は準備中です。コピーした文字や画像を隣の PC と共有する機能は、今後のアップデートで対応する予定です。それまでは、ファイルとして送ってください。</p>
           </details>
           <details class="reveal">
             <summary>カメラの映像は保存・送信されますか</summary>
