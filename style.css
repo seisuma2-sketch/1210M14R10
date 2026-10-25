@@ -56,7 +56,7 @@ ol, ul { list-style: none; }
 }
 .nav-inner { max-width: 1024px; height: 100%; margin: 0 auto; padding: 0 22px; display: flex; align-items: center; gap: 28px; }
 .nav-brand { display: flex; align-items: center; gap: 10px; color: #F5F5F7; font-weight: 600; font-size: 19px; letter-spacing: -0.01em; }
-.nav-brand img { border-radius: 5px; }
+.nav-brand img { display: block; }
 .nav-brand-ink { color: var(--ink); }
 .nav-links { display: flex; gap: 26px; margin-left: auto; }
 .nav-links a { font-size: 13px; color: rgba(245, 245, 247, 0.72); transition: color 0.2s; }
@@ -108,7 +108,7 @@ ol, ul { list-style: none; }
 .hero-title { font-size: clamp(48px, 8.6vw, 96px); background: linear-gradient(180deg, #FFFFFF 30%, #C9D3BE 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero-sub { margin: 26px auto 0; font-size: clamp(17px, 2.1vw, 24px); color: var(--mist); font-weight: 500; line-height: 1.5; }
 .hero-icon { position: relative; width: 240px; height: 240px; margin: 120px auto 104px; }
-.hero-icon img { position: relative; width: 100%; height: 100%; border-radius: 22.5%; box-shadow: 0 40px 120px -20px rgba(132, 204, 22, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.06); animation: float 7s ease-in-out infinite; }
+.hero-icon img { position: relative; width: 100%; height: 100%; filter: drop-shadow(0 34px 48px rgba(132, 204, 22, 0.42)); animation: float 7s ease-in-out infinite; }
 .orbit { position: absolute; left: 50%; top: 50%; border-radius: 50%; border: 1px solid rgba(163, 230, 53, 0.18); transform: translate(-50%, -50%); }
 .orbit::after { content: ""; position: absolute; top: -3px; left: 50%; width: 6px; height: 6px; margin-left: -3px; border-radius: 50%; background: var(--lime-bright); box-shadow: 0 0 12px 2px rgba(163, 230, 53, 0.8); }
 .orbit-1 { width: 340px; height: 340px; animation: spin 18s linear infinite; }
@@ -227,7 +227,7 @@ ol, ul { list-style: none; }
 
 /* ---------- Download ---------- */
 #download { background: radial-gradient(ellipse 70% 55% at 50% 20%, rgba(132, 204, 22, 0.16), transparent 70%), var(--black); }
-.dl-icon { width: 144px; height: 144px; margin: 0 auto 36px; border-radius: 22.5%; box-shadow: 0 30px 90px -16px rgba(132, 204, 22, 0.5); }
+.dl-icon { width: 144px; height: 144px; margin: 0 auto 36px; filter: drop-shadow(0 24px 36px rgba(132, 204, 22, 0.45)); }
 .dl-box { margin: 52px auto 0; max-width: 620px; padding: 40px 36px 30px; border-radius: 28px; background: var(--oled); border: 1px solid rgba(255, 255, 255, 0.07); }
 .dl-glyph { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .dl-retry { margin-top: 14px; font-size: 14px; color: var(--mist); }

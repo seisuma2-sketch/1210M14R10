@@ -85,7 +85,7 @@
 ## 6. ダウンロード仕様
 
 - 配布物: `1210M14R10-<版>-Setup.exe` (Velopack `vpk pack` の `1210M14R10-win-Setup.exe` を改名したもの)。
-- アイコン: プロジェクト直下の `icon.jpg` から生成した `app.ico` (16 / 20 / 24 / 32 / 40 / 48 / 64 / 96 / 128 / 256 px、角丸の外側は透明)。exe 本体 (`ApplicationIcon`) と Setup.exe (`vpk pack --icon`) の両方に使う。
+- アイコン (2026-10-25 変更、ユーザー指示): 緑の渦巻きのアイコン。原画はプロジェクト直下の `app_icon_source.png` (2048 px、白背景)、背景を透過したものが `app_icon_transparent.png` (1024 px。緑の光は半透明で残す)。これから `app.ico` (16 / 20 / 24 / 32 / 40 / 48 / 64 / 96 / 128 / 256 px) とサイトのアイコンを作る。`app.ico` は exe 本体 (`ApplicationIcon`) と Setup.exe (`vpk pack --icon`) の両方に使う。
 - 作成手順: プロジェクト直下の `インストーラーを作成.bat` を実行する。
   1. `配布用フォルダを最新に更新.bat /nopause /nozip` で `Publish_Offline` を作り直す。
   2. `vpk pack` で `Releases/` に Setup.exe・nupkg・更新フィードを出力する。
@@ -134,9 +134,9 @@ website/
   style.css                       デザイントークンとレイアウト
   main.js                         ナビ・スクロール表示・カード送り
   assets/
-    icon-1024.png / icon-512.png  ヒーロー・ダウンロード欄のアイコン (icon.jpg から生成)
-    apple-touch-icon.png          180px
-    favicon-32.png / favicon-64.png
+    icon-1024.png / icon-512.png  ヒーロー・ダウンロード欄・OGP のアイコン (app_icon_transparent.png から生成、背景透過)
+    apple-touch-icon.png          180px (iOS は透過部分を黒で塗るため、黒地に余白 15px で不透明にしたもの)
+    favicon-32.png / favicon-64.png  (背景透過)
   downloads/
     1210M14R10-<版>-Setup.exe     インストーラーを作成.bat が配置
 ```
