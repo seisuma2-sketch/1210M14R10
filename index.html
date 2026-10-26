@@ -62,7 +62,7 @@
             </svg></a>
         </div>
         <p class="hero-meta reveal">Windows 10 (2004 以降) / Windows 11 | 64 ビット | バージョン <span class="mono"
-            data-version>1.0.4</span></p>
+            data-version>1.0.5</span></p>
       </div>
     </section>
 
@@ -212,8 +212,8 @@
         </div>
         <div class="trio">
           <div class="reveal">
-            <h3>自動で昇格</h3>
-            <p>接続後、相手と名前が完全に一致した Wi-Fi Direct だけに切り替え。周囲のプリンターやテレビには接続しません。</p>
+            <h3>必要な時だけ高速に</h3>
+            <p>大きなファイルを送る瞬間だけ Wi-Fi Direct に切り替え、終わって 20 秒たつと自動で解除して Wi-Fi を休ませます。相手と名前が完全に一致した機器にしか接続しません。</p>
           </div>
           <div class="reveal">
             <h3>途切れない</h3>
@@ -221,13 +221,13 @@
           </div>
           <div class="reveal">
             <h3>何でも送れる</h3>
-            <p>写真、ファイル、フォルダ丸ごと。複数のファイルは 1 つにまとめて届けます。クリップボードの共有は今後のアップデートで対応予定です。</p>
+            <p>写真、ファイル、フォルダ丸ごと。エクスプローラーの右クリック「送る」からも送れます。コピーした文字や画像は、ボタンかショートカットを押した時だけ相手へ届けます。</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 5. Compact views (MiniCapsule / ThreeRingHud, 1.0.4) -->
+    <!-- 5. Compact views (MiniCapsule / ThreeRingHud, 1.0.4 / auto-hide and received card, 1.0.5) -->
     <section class="section dark" id="compact">
       <div class="wrap center">
         <p class="eyebrow reveal">常駐表示</p>
@@ -277,8 +277,8 @@
             <p>カプセルの接続チップを押すと、見つかった PC の一覧がその場で開きます。大きな画面に戻らずに接続を始められます。</p>
           </div>
           <div class="reveal">
-            <h3>好きな場所に</h3>
-            <p>画面の上端・下端の左・中央・右へ吸い付くように配置でき、次に起動した時も同じ場所に現れます。ファイルをカプセルへドロップすれば、そのまま装填。</p>
+            <h3>使わない時は、消える</h3>
+            <p>マウスを離すと画面から完全に隠れ、ブラウザのタブ操作も邪魔しません。画面の上端の中央に触れれば、どのモニターでもすぐに現れます。受け取ったファイルはサムネイル付きのカードで知らせ、ワンクリックで開けます。</p>
           </div>
         </div>
       </div>
@@ -289,7 +289,7 @@
       <div class="wrap center">
         <p class="eyebrow reveal">極限省電力設計</p>
         <h2 class="h-giant reveal"><span class="mono">0.02</span> W</h2>
-        <p class="lead reveal">常駐しているのに、ほとんど電気を使わない。<br>必要な瞬間だけ目を覚まし、終われば即座に眠ります。</p>
+        <p class="lead reveal">常駐しているのに、ほとんど電気を使わない。<br>必要な瞬間だけ目を覚まし、終われば即座に眠ります。<br>画面が消えたら、カメラも Bluetooth の探索も一緒に眠ります。</p>
       </div>
       <div class="wrap">
         <div class="stats">
@@ -364,15 +364,19 @@
           </div>
           <div class="reveal">
             <dt>接続と転送</dt>
-            <dd>Bluetooth RFCOMM で接続・承認<br>Wi-Fi Direct で高速転送 (非対応時は Bluetooth)</dd>
+            <dd>Bluetooth RFCOMM で接続・承認<br>大きなファイルの時だけ Wi-Fi Direct で高速転送 (転送後 20 秒で解除、非対応時は Bluetooth)</dd>
           </div>
           <div class="reveal">
             <dt>常駐表示</dt>
-            <dd>ミニカプセル 400 - 440 x 44 / 3 連リング 330 x 175<br>画面の上端・下端へスナップ配置、位置を記憶</dd>
+            <dd>ミニカプセル 400 - 440 x 44 / 3 連リング 330 x 175<br>画面の上端・下端へスナップ配置、位置を記憶<br>使わない時は完全に隠れ、画面の上端に触れると表示 (マルチモニター対応)</dd>
           </div>
           <div class="reveal">
             <dt>クリップボード共有</dt>
-            <dd>準備中<br><span class="muted">今後のアップデートで対応予定です。</span></dd>
+            <dd>テキスト / 画像をオンデマンドで送信<br><span class="muted">ボタンか Ctrl + Alt + Shift + C を押した時だけ。自動では同期しません。</span></dd>
+          </div>
+          <div class="reveal">
+            <dt>Windows 連携</dt>
+            <dd>エクスプローラーの「送る」メニュー<br>Windows 起動時にミニカプセルで自動起動 (設定画面から)</dd>
           </div>
           <div class="reveal">
             <dt>消費電力</dt>
@@ -416,15 +420,15 @@
             </div>
             <div>
               <dt>バージョン</dt>
-              <dd class="mono" data-version>1.0.4</dd>
+              <dd class="mono" data-version>1.0.5</dd>
             </div>
             <div>
               <dt>サイズ</dt>
-              <dd class="mono" id="dlSize">198.4 MB (208,086,981 バイト)</dd>
+              <dd class="mono" id="dlSize">198.5 MB (208,114,817 バイト)</dd>
             </div>
             <div>
               <dt>SHA-256</dt>
-              <dd class="mono hash" id="dlHash">c07243a79c8a50e708f4a3596bcaff92ab8e651cfc5bdea8bcec8e24f25572ed</dd>
+              <dd class="mono hash" id="dlHash">2d31cc6875efc673f91b32a0111ae575090bed1be07d6eb4b1616672f019a052</dd>
             </div>
           </dl>
         </div>
@@ -470,7 +474,11 @@
           </details>
           <details class="reveal">
             <summary>クリップボードの共有はできますか</summary>
-            <p>現在は準備中です。コピーした文字や画像を隣の PC と共有する機能は、今後のアップデートで対応する予定です。それまでは、ファイルとして送ってください。</p>
+            <p>できます。接続中に「クリップボードを送信」ボタンか Ctrl + Alt + Shift + C を押すと、その時にコピーしていた文字や画像が相手の PC のクリップボードへ届きます。コピーのたびに自動で送ることはありません。</p>
+          </details>
+          <details class="reveal">
+            <summary>受け取ったファイルはどこに保存されますか</summary>
+            <p>最初は 1210M14R10 のデータフォルダ内の received_files です。設定画面 (全画面表示の [ 設定 ]) から、ダウンロード フォルダや好きなフォルダに変更できます。受け取った時に出るカードの [ フォルダ ] からも開けます。</p>
           </details>
           <details class="reveal">
             <summary>カメラの映像は保存・送信されますか</summary>
