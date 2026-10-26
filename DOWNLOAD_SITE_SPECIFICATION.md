@@ -91,6 +91,7 @@
 - 配布物: `1210M14R10-<版>-Setup.exe` (Velopack `vpk pack` の `1210M14R10-win-Setup.exe` を改名したもの)。
 - アイコン (2026-10-25 変更、ユーザー指示): 緑の渦巻きのアイコン。原画はプロジェクト直下の `app_icon_source.png` (2048 px、白背景)、背景を透過したものが `app_icon_transparent.png` (1024 px。緑の光は半透明で残す)。これから `app.ico` (16 / 20 / 24 / 32 / 40 / 48 / 64 / 96 / 128 / 256 px) とサイトのアイコンを作る。`app.ico` は exe 本体 (`ApplicationIcon`) と Setup.exe (`vpk pack --icon`) の両方に使う。
   - 2026-10-26 (1.0.4): `app.ico` を `tools/IconGen` で作り直した (背景完全透過、シンボルを枠いっぱいに切り出し、32 px 以下は光のにじみを消して輪郭をシャープに)。`favicon-32.png` / `favicon-64.png` は `app.ico` の 32 / 64 px のフレームをそのまま使う。
+  - 2026-10-26 (くっきり版、ユーザー指示): 原画は黒背景から色を抜いた「光」の画像で、明るい部分ほど半透明 (アルファ 75 - 180) だったため、暗いデスクトップでは沈んで見えた。`tools/IconGen` の `--vivid` で、外側の光のにじみだけを消して残りを不透明にし、暗部を少し持ち上げ、彩度を上げ、暗部を青緑 / 明部を黄緑へ振り、左上からのハイライトを足す。`app.ico` とサイトのアイコン (下記 assets) は `dotnet run --project tools\IconGen -- app_icon_transparent.png app.ico --vivid --site-assets website\assets` で同時に作る。
 - 作成手順: プロジェクト直下の `インストーラーを作成.bat` を実行する。
   1. `配布用フォルダを最新に更新.bat /nopause /nozip` で `Publish_Offline` を作り直す。
   2. `vpk pack` で `Releases/` に Setup.exe・nupkg・更新フィードを出力する。
@@ -139,7 +140,7 @@ website/
   style.css                       デザイントークンとレイアウト
   main.js                         ナビ・スクロール表示・カード送り
   assets/
-    icon-1024.png / icon-512.png  ヒーロー・ダウンロード欄・OGP のアイコン (app_icon_transparent.png から生成、背景透過)
+    icon-1024.png / icon-512.png  ヒーロー・ダウンロード欄・OGP のアイコン (app_icon_transparent.png から IconGen --vivid で生成、背景透過)
     apple-touch-icon.png          180px (iOS は透過部分を黒で塗るため、黒地に余白 15px で不透明にしたもの)
     favicon-32.png / favicon-64.png  (背景透過)
   downloads/
