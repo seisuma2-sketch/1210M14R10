@@ -1,4 +1,4 @@
-// 1210M14R10 download site - navigation, scroll reveal, highlight gallery (spec section 7)
+// 1210M14R10 download site - navigation, scroll reveal, highlight gallery, floating orb demo (spec section 7)
 (function () {
   'use strict';
   var root = document.documentElement;
@@ -54,6 +54,83 @@
       track.scrollBy({ left: step * Number(btn.getAttribute('data-dir')), behavior: 'smooth' });
     });
   });
+
+  // Floating orb demo (#compact): hover = 1st magnitude (CSS), click or auto demo = sparkling fizz with a percent count,
+  // swatches = the 10 color themes of the app. Timers run only while the demo is playing or on screen.
+  var orb = document.getElementById('orbDemo');
+  if (orb) {
+    var pct = document.getElementById('orbPct');
+    var themeName = document.getElementById('orbThemeName');
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var FIZZ_MS = 2600;
+    var AUTO_MS = 7000;
+    var fizzTick = 0;
+    var fizzEnd = 0;
+    var autoTimer = 0;
+    var orbVisible = false;
+
+    function stopFizz() {
+      window.clearInterval(fizzTick);
+      window.clearTimeout(fizzEnd);
+      fizzTick = 0;
+      fizzEnd = 0;
+      orb.classList.remove('is-fizz');
+      pct.textContent = '';
+    }
+
+    function runFizz() {
+      if (fizzTick) return;
+      var start = Date.now();
+      orb.classList.add('is-fizz');
+      pct.textContent = '0%';
+      fizzTick = window.setInterval(function () {
+        var p = Math.min(100, Math.round((Date.now() - start) / FIZZ_MS * 100));
+        pct.textContent = p + '%';
+        if (p >= 100) {
+          window.clearInterval(fizzTick);
+          fizzEnd = window.setTimeout(stopFizz, 700);
+        }
+      }, 100);
+    }
+
+    function scheduleAuto() {
+      window.clearTimeout(autoTimer);
+      autoTimer = 0;
+      if (reduceMotion || !orbVisible) return;
+      autoTimer = window.setTimeout(function () { runFizz(); scheduleAuto(); }, AUTO_MS);
+    }
+
+    orb.addEventListener('click', function () { runFizz(); scheduleAuto(); });
+    orb.addEventListener('focus', function () {
+      var visible = true;
+      try { visible = orb.matches(':focus-visible'); } catch (err) { visible = true; }
+      if (visible) orb.classList.add('is-lit');
+    });
+    orb.addEventListener('blur', function () { orb.classList.remove('is-lit'); });
+
+    if (hasIO) {
+      new IntersectionObserver(function (entries) {
+        orbVisible = entries[0].isIntersecting;
+        if (orbVisible) {
+          if (!reduceMotion) runFizz();
+          scheduleAuto();
+        } else {
+          window.clearTimeout(autoTimer);
+          autoTimer = 0;
+          stopFizz();
+        }
+      }, { threshold: 0.5 }).observe(orb);
+    }
+
+    var swatches = document.querySelectorAll('.orb-themes [data-theme]');
+    swatches.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        orb.setAttribute('data-theme', btn.getAttribute('data-theme'));
+        swatches.forEach(function (b) { b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+        if (themeName) themeName.textContent = btn.getAttribute('aria-label');
+      });
+    });
+  }
 
   // Fallback link after the download button is pressed
   var retry = document.getElementById('dlRetry');

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>1210M14R10 - 手のひとふりで、隣の PC へ。</title>
   <meta name="description"
-    content="Web カメラのハンドジェスチャーで、写真やファイルを隣の PC へ解放して送る Windows ユーティリティ。Bluetooth と Wi-Fi Direct だけで完結し、待機電力は 0.02 W。">
+    content="Web カメラのハンドジェスチャーで、写真やファイルを隣の PC へ解放して送る Windows ユーティリティ。スマホからも QR でアプリ不要・ルーター不要の直結転送。Bluetooth と Wi-Fi Direct だけで完結し、待機電力は 0.02 W。">
   <meta name="theme-color" content="#000000">
   <meta property="og:type" content="website">
   <meta property="og:title" content="1210M14R10 for Windows">
@@ -19,6 +19,14 @@
 </head>
 
 <body>
+
+  <svg class="defs" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="qr-modules" viewBox="0 0 25 25">
+        <path d="M0 0h7v1h-7zM8 0h1v1h-1zM10 0h2v1h-2zM14 0h1v1h-1zM18 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM11 1h5v1h-5zM18 1h1v1h-1zM24 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM8 2h1v1h-1zM13 2h2v1h-2zM16 2h1v1h-1zM18 2h1v1h-1zM20 2h3v1h-3zM24 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM8 3h1v1h-1zM12 3h4v1h-4zM18 3h1v1h-1zM20 3h3v1h-3zM24 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM8 4h1v1h-1zM11 4h1v1h-1zM18 4h1v1h-1zM20 4h3v1h-3zM24 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM8 5h2v1h-2zM11 5h1v1h-1zM14 5h1v1h-1zM18 5h1v1h-1zM24 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h7v1h-7zM11 7h2v1h-2zM16 7h1v1h-1zM0 8h1v1h-1zM2 8h1v1h-1zM6 8h1v1h-1zM10 8h1v1h-1zM12 8h1v1h-1zM16 8h2v1h-2zM19 8h1v1h-1zM21 8h1v1h-1zM23 8h2v1h-2zM0 9h2v1h-2zM4 9h1v1h-1zM8 9h1v1h-1zM19 9h1v1h-1zM21 9h2v1h-2zM1 10h1v1h-1zM4 10h3v1h-3zM10 10h1v1h-1zM12 10h1v1h-1zM15 10h1v1h-1zM19 10h4v1h-4zM24 10h1v1h-1zM0 11h2v1h-2zM3 11h1v1h-1zM9 11h1v1h-1zM12 11h1v1h-1zM15 11h1v1h-1zM18 11h2v1h-2zM21 11h2v1h-2zM1 12h1v1h-1zM4 12h7v1h-7zM12 12h2v1h-2zM15 12h1v1h-1zM17 12h2v1h-2zM20 12h1v1h-1zM1 13h1v1h-1zM4 13h1v1h-1zM7 13h1v1h-1zM10 13h2v1h-2zM13 13h2v1h-2zM18 13h1v1h-1zM22 13h3v1h-3zM0 14h1v1h-1zM4 14h1v1h-1zM6 14h1v1h-1zM9 14h4v1h-4zM14 14h1v1h-1zM16 14h1v1h-1zM20 14h3v1h-3zM0 15h3v1h-3zM4 15h1v1h-1zM7 15h3v1h-3zM11 15h2v1h-2zM14 15h1v1h-1zM16 15h1v1h-1zM18 15h1v1h-1zM20 15h2v1h-2zM24 15h1v1h-1zM0 16h3v1h-3zM5 16h2v1h-2zM8 16h1v1h-1zM11 16h2v1h-2zM16 16h6v1h-6zM23 16h1v1h-1zM10 17h7v1h-7zM20 17h1v1h-1zM23 17h1v1h-1zM0 18h7v1h-7zM8 18h1v1h-1zM13 18h1v1h-1zM16 18h1v1h-1zM18 18h1v1h-1zM20 18h1v1h-1zM0 19h1v1h-1zM6 19h1v1h-1zM10 19h1v1h-1zM16 19h1v1h-1zM20 19h1v1h-1zM22 19h2v1h-2zM0 20h1v1h-1zM2 20h3v1h-3zM6 20h1v1h-1zM8 20h1v1h-1zM13 20h1v1h-1zM15 20h6v1h-6zM23 20h1v1h-1zM0 21h1v1h-1zM2 21h3v1h-3zM6 21h1v1h-1zM14 21h2v1h-2zM18 21h2v1h-2zM21 21h2v1h-2zM0 22h1v1h-1zM2 22h3v1h-3zM6 22h1v1h-1zM9 22h3v1h-3zM14 22h5v1h-5zM20 22h3v1h-3zM24 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM9 23h1v1h-1zM14 23h2v1h-2zM17 23h1v1h-1zM19 23h1v1h-1zM21 23h2v1h-2zM24 23h1v1h-1zM0 24h7v1h-7zM10 24h4v1h-4zM15 24h3v1h-3zM20 24h4v1h-4z" />
+      </symbol>
+    </defs>
+  </svg>
 
   <a class="skip" href="#main">本文へ移動</a>
 
@@ -74,27 +82,33 @@
       <div class="gallery reveal">
         <div class="gallery-track" id="gallery">
           <article class="card card-dark">
-            <p class="card-kicker">THROW DECK</p>
-            <h3 class="card-title">つまんで溜めて、<br>前へ解放するだけ。</h3>
-            <p class="card-text">写真やファイルを手で掴むように集め、投げる動作で隣の PC へ送信します。</p>
+            <p class="card-kicker">THROW DECK &amp; ジェスチャー</p>
+            <h3 class="card-title">手をかざして、<br>押し出すだけ。</h3>
+            <p class="card-text">写真やファイルをつまんで溜め、前へ押し出す動作で隣の PC へ空間スロー送信。手を払えば仮想デスクトップも切り替わります。</p>
             <div class="card-art art-deck" aria-hidden="true"><span></span><span></span><span></span></div>
           </article>
           <article class="card card-light">
-            <p class="card-kicker">仮想デスクトップ</p>
-            <h3 class="card-title">手を払えば、<br>画面が切り替わる。</h3>
-            <p class="card-text">開いた手を左右に払うと、Windows の仮想デスクトップを瞬時に移動します。</p>
-            <div class="card-art art-desk" aria-hidden="true"><span></span><span></span><span></span></div>
-          </article>
-          <article class="card card-light">
-            <p class="card-kicker">近接ダイレクト転送</p>
-            <h3 class="card-title">近くの PC を、<br>自動で見つける。</h3>
-            <p class="card-text">Bluetooth で探して承認し、Wi-Fi Direct で高速に転送。ルーターもケーブルも要りません。</p>
-            <div class="card-art art-link" aria-hidden="true"><span></span><i></i><span></span></div>
+            <p class="card-kicker">スマホ瞬間転送 QR</p>
+            <h3 class="card-title">カメラをかざせば、<br>ルーターなしで直結。</h3>
+            <p class="card-text">スマホにアプリは要りません。標準カメラで QR を読み、ブラウザから写真を選ぶだけで PC へ届きます。</p>
+            <div class="card-art art-qr" aria-hidden="true">
+              <svg class="art-qr-code" viewBox="-2 -2 29 29"><use href="#qr-modules" /></svg>
+              <span class="art-qr-scan"></span>
+            </div>
           </article>
           <article class="card card-dark">
+            <p class="card-kicker">1 等星フローティングオーブ</p>
+            <h3 class="card-title">邪魔をせず、<br>触れた瞬間に輝く。</h3>
+            <p class="card-text">デスクトップに小さく常駐。ファイルを落とせば装填、背景透過や圧縮もそのまま変換して送れます。</p>
+            <div class="card-art art-orb" data-theme="emerald" aria-hidden="true">
+              <svg viewBox="0 0 200 200"><path class="spike-2" d="M100 100L36 36L100 96.6L164 36L103.4 100L164 164L100 103.4L36 164L96.6 100Z" /><path class="spike-1" d="M100 2L103.4 96.6L198 100L103.4 103.4L100 198L96.6 103.4L2 100L96.6 96.6Z" /></svg>
+              <span></span>
+            </div>
+          </article>
+          <article class="card card-light">
             <p class="card-kicker">極限省電力</p>
-            <h3 class="card-title"><span class="mono lime">0.02 W</span><br>で待機。</h3>
-            <p class="card-text">手が写っていない間はカメラを物理的に切断し、CPU 使用率 0.00% で静かに待ちます。</p>
+            <h3 class="card-title"><span class="mono lime-ink">0.02 W</span><br>で待機。</h3>
+            <p class="card-text">待機時の CPU 使用率は 0.00%。手が写っていない間はカメラを物理的に切断し、バッテリーを減らしません。</p>
             <div class="card-art art-power" aria-hidden="true"><span></span></div>
           </article>
         </div>
@@ -224,15 +238,81 @@
             <p>写真、ファイル、フォルダ丸ごと。エクスプローラーの右クリック「送る」からも送れます。コピーした文字や画像は、ボタンかショートカットを押した時だけ相手へ届けます。</p>
           </div>
         </div>
+
+        <!-- Phone Drop Portal (1.3.6 / direct mode 1.4.0) -->
+        <div class="phone" id="phone">
+          <div class="phone-head center">
+            <p class="eyebrow eyebrow-ink reveal">スマホ瞬間転送 QR</p>
+            <h2 class="h1 reveal">スマホとも、<br class="br-sp">ルーターなしで直結。</h2>
+            <p class="lead lead-ink reveal">iPhone も Android も、標準カメラで PC の画面の QR を読むだけ。カフェや外出先のように Wi-Fi が無い場所でも、PC が自分で電波を出して 1 対 1 でつながります。</p>
+          </div>
+          <div class="phone-stage reveal" aria-hidden="true">
+            <svg class="phone-svg" viewBox="0 0 680 300">
+              <defs>
+                <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#84CC16" stop-opacity="0.15" />
+                  <stop offset="0.5" stop-color="#A3E635" />
+                  <stop offset="1" stop-color="#84CC16" stop-opacity="0.35" />
+                </linearGradient>
+              </defs>
+              <!-- phone -->
+              <g class="ph-device">
+                <rect x="40" y="34" width="124" height="232" rx="22" />
+                <rect class="ph-screen" x="50" y="50" width="104" height="200" rx="12" />
+                <rect class="ph-notch" x="88" y="40" width="28" height="5" rx="2.5" />
+                <rect class="ph-tile t1" x="62" y="70" width="36" height="36" rx="6" />
+                <rect class="ph-tile t2" x="106" y="70" width="36" height="36" rx="6" />
+                <rect class="ph-tile t3" x="62" y="114" width="36" height="36" rx="6" />
+                <rect class="ph-tile t4" x="106" y="114" width="36" height="36" rx="6" />
+                <rect class="ph-bar" x="62" y="176" width="80" height="6" rx="3" />
+                <rect class="ph-bar-fill" x="62" y="176" width="80" height="6" rx="3" />
+                <rect class="ph-btn" x="62" y="200" width="80" height="28" rx="14" />
+              </g>
+              <!-- light stream -->
+              <path class="beam-base" pathLength="100" d="M170 150C260 70 380 230 470 150" />
+              <path class="beam" pathLength="100" d="M170 150C260 70 380 230 470 150" />
+              <path class="beam-dots" pathLength="100" d="M170 150C260 70 380 230 470 150" />
+              <path class="beam-dots d2" pathLength="100" d="M170 150C260 70 380 230 470 150" />
+              <text class="ph-ssid" x="320" y="112">1210M14R10-Direct</text>
+              <!-- PC with QR -->
+              <g class="ph-pc">
+                <rect x="478" y="50" width="172" height="124" rx="10" />
+                <path d="M462 196h204" />
+                <rect class="ph-pc-screen" x="488" y="60" width="152" height="104" rx="5" />
+                <rect class="ph-qr-bg" x="526" y="72" width="76" height="76" rx="6" />
+                <svg class="ph-qr" x="530" y="76" width="68" height="68" viewBox="0 0 25 25"><use href="#qr-modules" /></svg>
+                <rect class="ph-qr-scan" x="526" y="72" width="76" height="3" rx="1.5" />
+              </g>
+            </svg>
+            <div class="phone-labels"><span>スマホ (標準カメラとブラウザ)</span><span>この PC (QR を表示)</span></div>
+          </div>
+          <ol class="phone-steps">
+            <li class="reveal">
+              <svg class="ico" viewBox="0 0 32 32" aria-hidden="true"><rect x="9" y="3" width="14" height="26" rx="3" /><path d="M14 25h4" /><path d="M2 2l28 28" class="ico-strike" /></svg>
+              <h3>アプリ不要</h3>
+              <p>スマホに専用アプリは入れません。標準カメラで QR を読み、開いたページで写真を選んで送るだけ。送信の進み具合もページに表示されます。</p>
+            </li>
+            <li class="reveal">
+              <svg class="ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 12a17 17 0 0 1 24 0" /><path d="M8.5 16.5a10.5 10.5 0 0 1 15 0" /><path d="M13 21a4 4 0 0 1 6 0" /><circle cx="16" cy="25" r="1.6" class="ico-fill" /></svg>
+              <h3>ルーター・Wi-Fi 不要</h3>
+              <p>同じ Wi-Fi にいれば QR 1 枚。Wi-Fi が無い場所では PC 直結モードに切り替えると、PC が Wi-Fi Direct の電波を出し、Wi-Fi の QR とページの QR を順に読むだけで 1 対 1 につながります。</p>
+            </li>
+            <li class="reveal">
+              <svg class="ico" viewBox="0 0 32 32" aria-hidden="true"><rect x="7" y="5" width="18" height="24" rx="3" /><rect x="12" y="2.5" width="8" height="5" rx="1.5" /><path d="M11.5 18l3.2 3.2 6-6.4" /></svg>
+              <h3>ピクチャへ、そのまま Ctrl + V</h3>
+              <p>受け取った写真は自動で <span class="mono path">ピクチャ\1210M14R10\Phone</span> に仕分けられ、クリップボードにもコピー。PC で <span class="kbd">Ctrl</span> + <span class="kbd">V</span> を押すだけで Word やチャットに貼り付けられます。</p>
+            </li>
+          </ol>
+        </div>
       </div>
     </section>
 
-    <!-- 5. Compact views (MiniCapsule / ThreeRingHud, 1.0.4 / auto-hide and received card, 1.0.5) -->
+    <!-- 5. Compact views (MiniCapsule / ThreeRingHud, 1.0.4 / auto-hide and received card, 1.0.5 / FloatingOrb, 1.3.x) -->
     <section class="section dark" id="compact">
       <div class="wrap center">
         <p class="eyebrow reveal">常駐表示</p>
         <h2 class="h1 reveal">画面のすみで、<br class="br-sp">ひと目でわかる。</h2>
-        <p class="lead reveal">普段は 1 行のカプセル、必要な時は 3 つのリング。接続・ファイル・手の認識を、短い日本語と色だけで伝えます。状態が変わった瞬間だけ描き直すので、表示中も電力はほとんど増えません。</p>
+        <p class="lead reveal">普段は 1 行のカプセル、必要な時は 3 つのリング、ピン留めを外せばデスクトップの 1 等星。接続・ファイル・手の認識を、短い日本語と色だけで伝えます。状態が変わった瞬間だけ描き直すので、表示中も電力はほとんど増えません。</p>
       </div>
       <div class="wrap">
         <div class="capsule-demo reveal" aria-hidden="true">
@@ -265,6 +345,46 @@
             <svg viewBox="0 0 100 100"><circle class="r-track" cx="50" cy="50" r="40" /><circle class="r-glow" cx="50" cy="50" r="40" /><circle class="r-val" cx="50" cy="50" r="40" /><text x="50" y="55">認識中</text></svg>
             <figcaption><span>【 手認識 】</span>カメラ良好 (15fps)</figcaption>
           </figure>
+        </div>
+
+        <div class="orb-demo">
+          <div class="orb-stage reveal">
+            <div class="orb-desk" aria-hidden="true"><span></span><span></span></div>
+            <button class="orb" id="orbDemo" type="button" data-theme="emerald" aria-describedby="orbHint">
+              <span class="visually-hidden">フローティングオーブのデモ: 押すと送受信の演出を再生します</span>
+              <svg class="orb-spikes" viewBox="0 0 200 200" aria-hidden="true"><path class="spike-2" d="M100 100L36 36L100 96.6L164 36L103.4 100L164 164L100 103.4L36 164L96.6 100Z" /><path class="spike-1" d="M100 2L103.4 96.6L198 100L103.4 103.4L100 198L96.6 103.4L2 100L96.6 96.6Z" /></svg>
+              <span class="orb-body" aria-hidden="true">
+                <span class="orb-fizz"><i style="--x:22%;--s:4.0px;--d:0.00s;--t:1.60s"></i><i style="--x:38%;--s:3.0px;--d:0.35s;--t:1.30s"></i><i style="--x:55%;--s:5.0px;--d:0.70s;--t:1.90s"></i><i style="--x:70%;--s:3.4px;--d:0.15s;--t:1.40s"></i><i style="--x:30%;--s:2.6px;--d:1.00s;--t:1.20s"></i><i style="--x:62%;--s:4.2px;--d:1.25s;--t:1.70s"></i><i style="--x:46%;--s:3.0px;--d:0.50s;--t:1.50s"></i><i style="--x:78%;--s:2.6px;--d:0.90s;--t:1.25s"></i><i style="--x:16%;--s:3.2px;--d:1.40s;--t:1.60s"></i><i style="--x:50%;--s:2.4px;--d:1.60s;--t:1.10s"></i><i style="--x:35%;--s:4.6px;--d:1.80s;--t:2.00s"></i><i style="--x:66%;--s:2.8px;--d:2.00s;--t:1.35s"></i></span>
+                <span class="orb-core"></span>
+                <span class="orb-pct mono" id="orbPct"></span>
+              </span>
+              <span class="orb-ring" aria-hidden="true"></span>
+            </button>
+            <p class="orb-hint" id="orbHint">マウスを重ねると 1 等星に。押すと送受信の演出。</p>
+          </div>
+          <div class="orb-copy">
+            <p class="eyebrow reveal">フローティングオーブ</p>
+            <h3 class="orb-title reveal">ピン留めを外せば、<br>デスクトップの 1 等星へ。</h3>
+            <p class="orb-lead reveal">邪魔にならず、触れた瞬間に輝く。直径 78 px の星が、画面のすみで静かに待ちます。</p>
+            <ul class="orb-points reveal">
+              <li><b>3 等星から 1 等星へ</b>普段は淡い光。マウスが触れると十字の光条が伸び、白いコアが灯ります。</li>
+              <li><b>シュワっと送受信</b>転送中は星の中を光の気泡が立ち昇り、中央に進み具合を表示します。</li>
+              <li><b>落とすだけで変換</b>ファイルを落とすと装填。右クリックから背景透過・縮小圧縮・ZIP にして送れ、スクショはコピーした瞬間に装填されます。</li>
+            </ul>
+            <div class="orb-themes reveal" role="group" aria-label="カラーテーマ (10 色)">
+              <button type="button" data-theme="emerald" aria-label="エメラルドグリーン" aria-pressed="true"></button>
+              <button type="button" data-theme="cyan" aria-label="シアンブルー" aria-pressed="false"></button>
+              <button type="button" data-theme="crimson" aria-label="クリムゾンレッド" aria-pressed="false"></button>
+              <button type="button" data-theme="violet" aria-label="バイオレットパープル" aria-pressed="false"></button>
+              <button type="button" data-theme="sunset" aria-label="サンセットオレンジ" aria-pressed="false"></button>
+              <button type="button" data-theme="pink" aria-label="ホットピンク" aria-pressed="false"></button>
+              <button type="button" data-theme="amber" aria-label="アンバーゴールド" aria-pressed="false"></button>
+              <button type="button" data-theme="lime" aria-label="ライムネオン" aria-pressed="false"></button>
+              <button type="button" data-theme="azure" aria-label="ディープアズール" aria-pressed="false"></button>
+              <button type="button" data-theme="platinum" aria-label="プラチナホワイト" aria-pressed="false"></button>
+            </div>
+            <p class="orb-theme-name mono reveal" id="orbThemeName" aria-live="polite">エメラルドグリーン</p>
+          </div>
         </div>
 
         <div class="trio trio-dark">
@@ -368,7 +488,15 @@
           </div>
           <div class="reveal">
             <dt>常駐表示</dt>
-            <dd>ミニカプセル 400 - 440 x 44 / 3 連リング 330 x 175<br>画面の上端・下端へスナップ配置、位置を記憶<br>使わない時は完全に隠れ、画面の上端に触れると表示 (マルチモニター対応)</dd>
+            <dd>ミニカプセル 400 - 440 x 44 / 3 連リング 330 x 175 / フローティングオーブ (直径 78 px)<br>画面の上端・下端へスナップ配置、位置を記憶 (オーブはドラッグ移動と画面端への吸着)<br>完全自動隠蔽: 使わない時は完全に隠れ、画面の上端に触れると表示 (マルチモニター対応)<br>カラーテーマ 10 色</dd>
+          </div>
+          <div class="reveal">
+            <dt>スマホ連携</dt>
+            <dd>QR コードで直結 (スマホ側のアプリ不要、標準カメラとブラウザで送信)<br>同じ Wi-Fi 経由 / PC 直結モード (Wi-Fi Direct SoftAP、ルーター不要)<br>ローカル HTTP (ポート 50070。使用中の時は空いているポート)<br>写真は ピクチャ\1210M14R10\Phone へ自動仕分け、それ以外のファイルは ダウンロード\Phone<br>クリップボードへ自動コピー (写真 1 枚なら画像として Ctrl + V で貼り付け)</dd>
+          </div>
+          <div class="reveal">
+            <dt>ツール機能</dt>
+            <dd>ドロップ・オートアクション: スマート背景透過 / 軽量リサイズ圧縮 (長辺 1920 px、JPEG) / PNG・JPEG 変換 / ZIP 化<br>スクショ即装填 (Win + Shift + S などで画像をコピーすると自動で装填)<br><span class="muted">変換は PC の中だけで行い、元のファイルは書き換えません。</span></dd>
           </div>
           <div class="reveal">
             <dt>クリップボード共有</dt>
@@ -479,6 +607,14 @@
           <details class="reveal">
             <summary>受け取ったファイルはどこに保存されますか</summary>
             <p>最初は 1210M14R10 のデータフォルダ内の received_files です。設定画面 (全画面表示の [ 設定 ]) から、ダウンロード フォルダや好きなフォルダに変更できます。受け取った時に出るカードの [ フォルダ ] からも開けます。</p>
+          </details>
+          <details class="reveal">
+            <summary>スマートフォンから送る時にスマホ側へのアプリインストールは必要ですか</summary>
+            <p>一切不要です。iPhone や Android の標準カメラで QR コードを読み取るだけで、ブラウザから安全に直結送信できます。QR のアドレスには毎回変わる鍵が入っていて、受付を閉じると使えなくなります。Wi-Fi ルーターがない屋外でも PC 直結モードで転送可能です (PC どうしを Wi-Fi Direct で接続している間は、同じ Wi-Fi 経由で受け付けます)。</p>
+          </details>
+          <details class="reveal">
+            <summary>デスクトップの丸 (オーブ) は作業の邪魔になりませんか</summary>
+            <p>普段は半透明の控えめな光 (3 等星) で、作業を邪魔しません。触れた瞬間だけ 1 等星として輝き、好きな位置へドラッグ移動や画面端への吸着も可能です。右クリックの「動作設定」で「常に最前面に表示」を外すと、他のアプリを使っている間はその下に沈みます。</p>
           </details>
           <details class="reveal">
             <summary>カメラの映像は保存・送信されますか</summary>
