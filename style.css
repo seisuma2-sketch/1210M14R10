@@ -306,6 +306,7 @@ ol, ul { list-style: none; }
 .footer { background: var(--paper); color: var(--ink-2); padding: 36px 0 48px; font-size: 12px; border-top: 1px solid #D2D2D7; }
 .footer-top { display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; margin-bottom: 18px; border-bottom: 1px solid #D2D2D7; }
 .footer-top .link { font-size: 14px; }
+.footer-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; }
 .footer-note { line-height: 1.7; }
 .footer-copy { margin-top: 12px; }
 
@@ -395,6 +396,22 @@ ol, ul { list-style: none; }
 .orb-themes button[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--black), 0 0 0 4px var(--o-accent); }
 .orb-theme-name { margin-top: 12px; font-size: 13px; color: #86868B; }
 
+/* ---------- 1210 series (sister tool) ---------- */
+.series { padding: 120px 0; }
+.series-heading { margin-bottom: 0; }
+.series-card { margin: 56px auto 0; max-width: 860px; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 40px; align-items: center; padding: 44px 48px; border-radius: 28px; background: var(--oled); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07); }
+.series-art svg { width: 100%; height: auto; }
+.series-art .sa-screen { fill: var(--surface); stroke: #3A4048; stroke-width: 2; }
+.series-art .sa-stand { fill: none; stroke: #3A4048; stroke-width: 3; stroke-linecap: round; }
+.series-art .sa-key { fill: none; stroke: #3A4048; stroke-width: 1.5; }
+.series-art .sa-link { fill: none; stroke: var(--lime); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 2 6; }
+.series-art .sa-cursor { fill: var(--lime-bright); stroke: var(--black); stroke-width: 1.2; stroke-linejoin: round; }
+.series-name { font-size: 14px; color: var(--lime-bright); }
+.series-title { margin: 10px 0 14px; font-size: clamp(24px, 3vw, 30px); font-weight: 700; letter-spacing: -0.015em; line-height: 1.25; color: #F5F5F7; }
+.series-text { color: var(--mist); font-size: 16px; line-height: 1.65; }
+.series-meta { margin-top: 14px; font-size: 13px; color: #86868B; }
+.series-link { margin-top: 22px; font-size: 16px; }
+
 /* ---------- Reveal ---------- */
 .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
 .js .reveal.is-in { opacity: 1; transform: none; }
@@ -443,6 +460,9 @@ ol, ul { list-style: none; }
   .install { margin-top: 48px; }
   .faq summary { font-size: 17px; }
   .footer-top { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .series { padding: 84px 0; }
+  .series-card { grid-template-columns: 1fr; gap: 24px; padding: 30px 22px 32px; margin-top: 40px; border-radius: 22px; }
+  .series-art { width: 100%; max-width: 220px; margin: 0 auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
