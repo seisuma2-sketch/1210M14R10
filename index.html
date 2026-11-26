@@ -62,7 +62,7 @@
             </svg></a>
         </div>
         <p class="hero-meta reveal">Windows 10 (2004 以降) / Windows 11 | 64 ビット | バージョン <span class="mono"
-            data-version>1.6.4</span></p>
+            data-version>1.6.5</span></p>
       </div>
     </section>
 
@@ -449,11 +449,11 @@
           </div>
           <div class="reveal">
             <dt>インストール</dt>
-            <dd>ユーザー単位 (管理者権限は不要)<br>Python ランタイムを同梱 (別途インストール不要)</dd>
+            <dd>ユーザー単位 (管理者権限は不要)<br>Standard 版 (カメラなし・軽量) / Gesture 版 (Python ランタイム &amp; モデル同梱) の 2 種類から選択可能</dd>
           </div>
           <div class="reveal">
             <dt>更新</dt>
-            <dd>Velopack による差分更新</dd>
+            <dd>Velopack による差分更新 (Standard 版・Gesture 版それぞれ専用チャンネルで自動更新)</dd>
           </div>
         </dl>
       </div>
@@ -464,37 +464,79 @@
       <div class="wrap center">
         <img class="dl-icon reveal" src="assets/icon-512.png" alt="1210M14R10 のアイコン" width="144" height="144">
         <h2 class="h1 reveal">今すぐ、はじめよう。</h2>
-        <p class="lead reveal">送る側と受け取る側、両方の PC にインストールしてください。</p>
-        <div class="dl-box reveal">
-          <a class="pill pill-lg" data-download
-            href="https://github.com/seisuma2-sketch/1210M14R10/releases/latest/download/1210M14R10-win-Setup.exe"
-            download>
-            <svg class="dl-glyph" viewBox="0 0 16 16" aria-hidden="true">
-              <path d="M8 1v9M4 6.5L8 10.5 12 6.5M2 14h12" />
-            </svg>
-            Windows 版をダウンロード
-          </a>
-          <p class="dl-retry" id="dlRetry" hidden>ダウンロードが始まらない場合は <a data-download
-              href="https://github.com/seisuma2-sketch/1210M14R10/releases/latest/download/1210M14R10-win-Setup.exe">こちら</a>
-          </p>
-          <dl class="dl-meta">
-            <div>
-              <dt>ファイル</dt>
-              <dd class="mono" id="dlFile">1210M14R10-win-Setup.exe</dd>
-            </div>
-            <div>
-              <dt>バージョン</dt>
-              <dd class="mono" data-version>1.6.4</dd>
-            </div>
-            <div>
-              <dt>サイズ</dt>
-              <dd class="mono" id="dlSize">73.1 MB (76,635,459 バイト)</dd>
-            </div>
-            <div>
-              <dt>SHA-256</dt>
-              <dd class="mono hash" id="dlHash">e33bb9d6cd4ec885a3367655d80f1c005a3411734694a1bc0fb2b79e8d90a061</dd>
-            </div>
-          </dl>
+        <p class="lead reveal">用途に合わせて 2 つのエディションから選べます。<br>送る側と受け取る側、両方の PC にインストールしてください (Standard 版と Gesture 版どうしでも通信できます)。</p>
+        <div class="dl-grid reveal">
+          <!-- Standard Edition (カメラなし・軽量) -->
+          <article class="dl-box dl-card dl-card-featured">
+            <span class="dl-badge dl-badge-primary">おすすめ・軽量</span>
+            <h3 class="dl-card-title">Standard 版</h3>
+            <p class="dl-card-desc">カメラ・ジェスチャー関連の UI を省いた軽量版。ファイル・写真の高速共有をすっきり使いたい方に最適です。</p>
+            <a class="pill pill-lg" data-download="standard"
+              href="https://github.com/seisuma2-sketch/1210M14R10/releases/latest/download/1210M14R10-win-Setup.exe"
+              download>
+              <svg class="dl-glyph" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8 1v9M4 6.5L8 10.5 12 6.5M2 14h12" />
+              </svg>
+              Standard 版をダウンロード
+            </a>
+            <p class="dl-retry" id="dlRetryStandard" hidden>ダウンロードが始まらない場合は <a data-download="standard"
+                href="https://github.com/seisuma2-sketch/1210M14R10/releases/latest/download/1210M14R10-win-Setup.exe">こちら</a>
+            </p>
+            <dl class="dl-meta">
+              <div>
+                <dt>ファイル</dt>
+                <dd class="mono" id="dlFileStandard">1210M14R10-win-Setup.exe</dd>
+              </div>
+              <div>
+                <dt>バージョン</dt>
+                <dd class="mono" data-version>1.6.5</dd>
+              </div>
+              <div>
+                <dt>サイズ</dt>
+                <dd class="mono" id="dlSizeStandard">73.1 MB (76,613,556 バイト)</dd>
+              </div>
+              <div>
+                <dt>SHA-256</dt>
+                <dd class="mono hash" id="dlHashStandard">170167d2c1d1629428aaf37bf39888a1c1cd592e66ba6cd927fb7189fb8615c2</dd>
+              </div>
+            </dl>
+          </article>
+
+          <!-- Gesture Edition (カメラあり・フル版) -->
+          <article class="dl-box dl-card">
+            <span class="dl-badge">カメラ・ジェスチャー同梱</span>
+            <h3 class="dl-card-title">Gesture 版</h3>
+            <p class="dl-card-desc">Web カメラの空間ハンドジェスチャー操作に対応したフル版。Python ランタイムと認識モデルを同梱し、すぐ使えます。</p>
+            <a class="pill pill-lg pill-outline" data-download="gesture"
+              href="https://github.com/seisuma2-sketch/1210M14R10/releases/latest/download/1210M14R10-win-gesture-Setup.exe"
+              download>
+              <svg class="dl-glyph" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8 1v9M4 6.5L8 10.5 12 6.5M2 14h12" />
+              </svg>
+              Gesture 版をダウンロード
+            </a>
+            <p class="dl-retry" id="dlRetryGesture" hidden>ダウンロードが始まらない場合は <a data-download="gesture"
+                href="https://github.com/seisuma2-sketch/1210M14R10/releases/latest/download/1210M14R10-win-gesture-Setup.exe">こちら</a>
+            </p>
+            <dl class="dl-meta">
+              <div>
+                <dt>ファイル</dt>
+                <dd class="mono" id="dlFileGesture">1210M14R10-win-gesture-Setup.exe</dd>
+              </div>
+              <div>
+                <dt>バージョン</dt>
+                <dd class="mono" data-version>1.6.5</dd>
+              </div>
+              <div>
+                <dt>サイズ</dt>
+                <dd class="mono" id="dlSizeGesture">178.3 MB (186,957,028 バイト)</dd>
+              </div>
+              <div>
+                <dt>SHA-256</dt>
+                <dd class="mono hash" id="dlHashGesture">8d672dd65442fb1b845bf532cf2d7455f0ef1a54aa0c53ecd361537489f95118</dd>
+              </div>
+            </dl>
+          </article>
         </div>
         <ol class="install">
           <li class="reveal"><span class="mono">1</span>
@@ -530,7 +572,7 @@
           </details>
           <details class="reveal">
             <summary>Web カメラがなくても使えますか</summary>
-            <p>ジェスチャー操作にはカメラが必要ですが、ファイルをウィンドウへドラッグ &amp; ドロップして送ることもできます。本体インストーラーは軽量コア版となっており、ジェスチャー操作を使いたい場合のみ設定画面から専用パックを追加ダウンロードして有効化できます。</p>
+            <p>はい。Web カメラを使わない方向けに、カメラ関連の UI をすべて省いた軽量な「Standard 版」(約 73 MB) をご用意しています。ファイルのドラッグ &amp; ドロップやエクスプローラーの「送る」メニューから快適に送信でき、Gesture 版の PC ともそのまま通信できます。</p>
           </details>
           <details class="reveal">
             <summary>Wi-Fi Direct に対応していない PC では</summary>
@@ -554,7 +596,7 @@
           </details>
           <details class="reveal">
             <summary>Python を別に入れる必要はありますか</summary>
-            <p>ありません。ビジョンエンジン用の Python ランタイムと必要なライブラリはインストーラーに同梱されています。</p>
+            <p>ありません。「Gesture 版」にはビジョンエンジン用の Python ランタイムと必要なライブラリ・モデルが最初から同梱されています。「Standard 版」では Python 自体を使用しません。</p>
           </details>
           <details class="reveal">
             <summary>ファイアウォールの確認が表示されました</summary>

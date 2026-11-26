@@ -132,45 +132,67 @@
     });
   }
 
-  // Fallback link after the download button is pressed
-  var retry = document.getElementById('dlRetry');
+  // Fallback link after each edition download button is pressed
+  var retryMap = {
+    standard: document.getElementById('dlRetryStandard'),
+    gesture: document.getElementById('dlRetryGesture')
+  };
   document.querySelectorAll('.dl-box > [data-download]').forEach(function (a) {
     a.addEventListener('click', function () {
-      window.setTimeout(function () { retry.hidden = false; }, 1500);
+      var edition = a.getAttribute('data-download');
+      var retry = retryMap[edition];
+      if (retry) {
+        window.setTimeout(function () { retry.hidden = false; }, 1500);
+      }
     });
   });
 
-  // Latest release: version, file name, size and SHA-256 from the GitHub API (spec section 6).
+  // Latest release: version, file name, size and SHA-256 for both editions from the GitHub API (spec section 6).
   // The values written in index.html stay as the fallback when the API cannot be reached.
   var RELEASE_API = 'https://api.github.com/repos/seisuma2-sketch/1210M14R10/releases/latest';
-  var SETUP_ASSET = '1210M14R10-win-Setup.exe';
+  var EDITIONS = [
+    { key: 'standard', asset: '1210M14R10-win-Setup.exe', fileId: 'dlFileStandard', sizeId: 'dlSizeStandard', hashId: 'dlHashStandard' },
+    { key: 'gesture', asset: '1210M14R10-win-gesture-Setup.exe', fileId: 'dlFileGesture', sizeId: 'dlSizeGesture', hashId: 'dlHashGesture' }
+  ];
 
   function formatSize(bytes) {
     var mb = (bytes / 1048576).toFixed(1);
     return mb + ' MB (' + bytes.toLocaleString('ja-JP') + ' バイト)';
   }
 
+  function applyAsset(cfg, asset) {
+    if (!asset) return;
+    var file = document.getElementById(cfg.fileId);
+    if (file) file.textContent = asset.name;
+    var size = document.getElementById(cfg.sizeId);
+    if (size && typeof asset.size === 'number') size.textContent = formatSize(asset.size);
+    var hash = document.getElementById(cfg.hashId);
+    var digest = typeof asset.digest === 'string' ? asset.digest : '';
+    if (hash && digest.indexOf('sha256:') === 0) hash.textContent = digest.slice(7);
+    if (asset.browser_download_url) {
+      document.querySelectorAll('[data-download="' + cfg.key + '"]').forEach(function (a) {
+        a.href = asset.browser_download_url;
+      });
+    }
+  }
+
   function showRelease(release) {
     var assets = release.assets || [];
-    var setup = null;
-    for (var i = 0; i < assets.length; i++) {
-      if (assets[i].name === SETUP_ASSET) { setup = assets[i]; break; }
-    }
-    if (!setup) return;
+    var matchedAny = false;
+    EDITIONS.forEach(function (cfg) {
+      for (var i = 0; i < assets.length; i++) {
+        if (assets[i].name === cfg.asset) {
+          applyAsset(cfg, assets[i]);
+          matchedAny = true;
+          break;
+        }
+      }
+    });
+    if (!matchedAny) return;
 
     var version = String(release.tag_name || '').replace(/^v/, '');
     if (version) {
       document.querySelectorAll('[data-version]').forEach(function (el) { el.textContent = version; });
-    }
-    var file = document.getElementById('dlFile');
-    if (file) file.textContent = setup.name;
-    var size = document.getElementById('dlSize');
-    if (size && typeof setup.size === 'number') size.textContent = formatSize(setup.size);
-    var hash = document.getElementById('dlHash');
-    var digest = typeof setup.digest === 'string' ? setup.digest : '';
-    if (hash && digest.indexOf('sha256:') === 0) hash.textContent = digest.slice(7);
-    if (setup.browser_download_url) {
-      document.querySelectorAll('[data-download]').forEach(function (a) { a.href = setup.browser_download_url; });
     }
   }
 

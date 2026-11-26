@@ -273,7 +273,19 @@ ol, ul { list-style: none; }
 /* ---------- Download ---------- */
 #download { background: radial-gradient(ellipse 70% 55% at 50% 20%, rgba(132, 204, 22, 0.16), transparent 70%), var(--black); }
 .dl-icon { width: 144px; height: 144px; margin: 0 auto 36px; filter: drop-shadow(0 24px 36px rgba(132, 204, 22, 0.45)); }
+.dl-grid { margin: 52px auto 0; max-width: 960px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; align-items: stretch; }
 .dl-box { margin: 52px auto 0; max-width: 620px; padding: 40px 36px 30px; border-radius: 28px; background: var(--oled); border: 1px solid rgba(255, 255, 255, 0.07); }
+.dl-card { margin: 0; max-width: none; padding: 34px 28px 26px; display: flex; flex-direction: column; align-items: center; }
+.dl-card-featured { border-color: rgba(132, 204, 22, 0.45); box-shadow: 0 12px 40px rgba(132, 204, 22, 0.12); }
+.dl-badge { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: 0.04em; background: rgba(255, 255, 255, 0.08); color: #E8E8ED; margin-bottom: 14px; }
+.dl-badge-primary { background: rgba(132, 204, 22, 0.18); color: var(--lime-bright); border: 1px solid rgba(132, 204, 22, 0.35); }
+.dl-card-title { font-size: 26px; font-weight: 700; color: #F5F5F7; margin-bottom: 10px; }
+.dl-card-desc { font-size: 14.5px; line-height: 1.65; color: var(--mist); margin-bottom: 24px; min-height: 48px; }
+.pill-outline { background: transparent; color: var(--lime-bright); border: 1.5px solid var(--lime-bright); }
+.pill-outline:hover { background: rgba(132, 204, 22, 0.14); color: #F5F5F7; }
+.dl-card > .pill { margin-bottom: 20px; }
+.dl-card .dl-retry { margin-top: -6px; margin-bottom: 18px; }
+.dl-card .dl-meta { width: 100%; margin-top: auto; padding-top: 12px; }
 .dl-glyph { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .dl-retry { margin-top: 14px; font-size: 14px; color: var(--mist); }
 .dl-retry a { color: var(--lime-bright); text-decoration: underline; }
@@ -455,7 +467,9 @@ ol, ul { list-style: none; }
   .lane { grid-template-columns: 52px 1fr; }
   .lane-name { grid-column: 1 / -1; text-align: left; min-width: 0; }
   .spec > div { grid-template-columns: 1fr; gap: 6px; padding: 20px 0; }
+  .dl-grid { grid-template-columns: 1fr; }
   .dl-box { padding: 28px 18px 20px; }
+  .dl-card-desc { min-height: 0; }
   .dl-meta > div { grid-template-columns: 1fr; gap: 2px; }
   .install { margin-top: 48px; }
   .faq summary { font-size: 17px; }
